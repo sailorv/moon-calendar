@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "881442fbc088c78100af39dbc73d4710",
+    "revision": "24e23b64bd95597e69f4431669a8f148",
     "url": "/moon-calendar/index.html"
   },
   {
