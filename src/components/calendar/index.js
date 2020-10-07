@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import './calendar.css';
+import './css/calendar.css';
 
 export default class Calendar extends React.Component {
 
@@ -118,7 +118,19 @@ export default class Calendar extends React.Component {
       var moonPhaseName = "Calculating..."
     }
     return (
-      <span className={moonPhaseName}>Today's moon is a {moonPhaseName} moon.</span>
+      <h2 className={moonPhaseName}>{moonPhaseName}</h2>
+    );
+  }
+
+  showJournalPrompts = () => {
+    return (
+      <ul className="moonPhase-prompts">
+        <li>Let go. What bad habits or obstacles hinder you from completing your goals?</li>
+        <li>Celebrate recent achievements.</li>
+        <li>List things you are grateful for that have helped you reach your goals.</li>
+        <li>Acknowledge harm you have experienced this past month. Release and forgive.</li>
+        <li>Soak in a bath, enjoy some quiet time.</li>
+      </ul>
     );
   }
 
@@ -203,8 +215,9 @@ export default class Calendar extends React.Component {
       </div>
       <div className="phase-container">
         <div className="moonPhase">
-        <h2>Today is</h2>
         <this.showMoonPhase />
+        <h3>{this.month()} {this.currentDate()}</h3>
+        <this.showJournalPrompts />
         </div>
       </div>
     </div>

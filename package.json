@@ -9,6 +9,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "moment": "^2.29.1",
+    "node-sass": "^4.14.1",
     "platformsh-config": "^2.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -20,6 +21,7 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "scss": "node-sass --watch src/components/calendar/scss -o src/components/calendar/css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

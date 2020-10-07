@@ -1,7 +1,10 @@
-body{
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(45deg, #787492 0%, #545166 100%);
 
+$fontSansSerif : 'Open Sans', sans-serif;
+
+
+body{
+  font-family: $fontSansSerif;
+  background: linear-gradient(45deg, #787492 0%, #545166 100%);
 }
 
 h2 {
@@ -22,7 +25,6 @@ h2 {
 }
 
 .calendar-container, .phase-container {
-
   transition: border-radius .2s ease-in-out;
   width: 50%;
   display: block;
@@ -49,16 +51,13 @@ h2 {
 ul.calendar-weekdays {
   margin: 0;
   padding: 0;
+  li.week-day {
+      display: inline-block;
+      width: calc(100% / 7);
+      margin: 0;
+      padding: 0;
+  }
 }
-
-ul.calendar-weekdays li.week-day {
-    display: inline-block;
-    width: calc(100% / 7);
-    margin: 0;
-    padding: 0;
-}
-
-/* Calendar days */
 li.emptySlot, li.day {
     width: calc(100% / 7);
     display: inline-block;
@@ -69,15 +68,26 @@ li.emptySlot, li.day {
     padding-bottom: 20px;
     position: relative;
     transition: all .3s ease-in-out;
+    span {                    // Display the dates
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    &.selected-day {
+        background-color:yellow;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        border-radius: 2%;
+        color: black;
+    }
+    &.current-day {
+        background-color: #787CBB;
+        color: #fff;
+    }
 }
 li.day:hover {
   background-color: #eee;
-}
-
-li.day span {
-  position: absolute;
-  top: 10px;
-  left: 10px;
 }
 
 .week-day {
@@ -94,38 +104,11 @@ li.day span {
   text-align: center;
 }
 
-.calendar-header {
-    border-bottom: 1px dashed skyblue;
-    font-size: 1.6em;
-}
-
-.calendar-header td {
-    border-spacing: 0;
-    padding-left: 5px;
-}
-
-.day {
-    font-size: 0.8em;
-}
-
 .day {
     cursor: pointer;
     width: 24px;
     height: 24px;
     line-height: 24px;
-}
-
-.current-day {
-    background-color: #787CBB;
-    color: #fff;
-}
-.selected-day {
-    background-color:yellow;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    border-radius: 2%;
-    color: black;
 }
 
 .month-popup {
@@ -146,12 +129,6 @@ li.day span {
     right:3px;
 }
 
-.prev {
-}
-
-.next {
-}
-
 .editor-year {
     max-width: 3.6em;
 }
@@ -160,4 +137,24 @@ li.day span {
   font-size: 0.6em;
   cursor: pointer;
   display: none;
+}
+
+/* Moon Phase */
+ul.moonPhase-prompts {
+  list-style: none;
+  margin: 20px auto 0 auto;
+  padding: 0px;
+  text-align: left;
+  width: 80%;
+}
+ul.moonPhase-prompts li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  display: block;
+  transition: all .4s ease-in-out;
+  padding-left: 3px;
+}
+ul.moonPhase-prompts li:hover {
+  opacity: 0.5;
+  padding-left: 8px;
 }
