@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Calendar from './components/calendar/';
+
+const style = {
+  position: "relative",
+  margin: "50px auto"
+}
+
+class App extends Component {
+  onDayClick = (e, day) => {
+    alert(day);
+  }
+  
+  render() {
+    return (
+      <div className="App">
+      <Calendar style={style}
+        onDayClick={(e, day)=> this.onDayClick(e, day)}/>
+      </div>
+    );
+  }
 }
 
 export default App;
