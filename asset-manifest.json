@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/moon-calendar/static/css/main.0b8eb840.chunk.css",
-    "main.js": "/moon-calendar/static/js/main.ac39d31f.chunk.js",
-    "main.js.map": "/moon-calendar/static/js/main.ac39d31f.chunk.js.map",
+    "main.css": "/moon-calendar/static/css/main.697b4cbb.chunk.css",
+    "main.js": "/moon-calendar/static/js/main.c80c5662.chunk.js",
+    "main.js.map": "/moon-calendar/static/js/main.c80c5662.chunk.js.map",
     "runtime-main.js": "/moon-calendar/static/js/runtime-main.8ad4c45a.js",
     "runtime-main.js.map": "/moon-calendar/static/js/runtime-main.8ad4c45a.js.map",
     "static/js/2.f12bc997.chunk.js": "/moon-calendar/static/js/2.f12bc997.chunk.js",
     "static/js/2.f12bc997.chunk.js.map": "/moon-calendar/static/js/2.f12bc997.chunk.js.map",
     "index.html": "/moon-calendar/index.html",
-    "precache-manifest.a3db97141e97a547ba872762b2e8e53d.js": "/moon-calendar/precache-manifest.a3db97141e97a547ba872762b2e8e53d.js",
+    "precache-manifest.3e4db0e23fa82837d25dc08980a5e0a1.js": "/moon-calendar/precache-manifest.3e4db0e23fa82837d25dc08980a5e0a1.js",
     "service-worker.js": "/moon-calendar/service-worker.js",
-    "static/css/main.0b8eb840.chunk.css.map": "/moon-calendar/static/css/main.0b8eb840.chunk.css.map",
+    "static/css/main.697b4cbb.chunk.css.map": "/moon-calendar/static/css/main.697b4cbb.chunk.css.map",
     "static/js/2.f12bc997.chunk.js.LICENSE.txt": "/moon-calendar/static/js/2.f12bc997.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8ad4c45a.js",
     "static/js/2.f12bc997.chunk.js",
-    "static/css/main.0b8eb840.chunk.css",
-    "static/js/main.ac39d31f.chunk.js"
+    "static/css/main.697b4cbb.chunk.css",
+    "static/js/main.c80c5662.chunk.js"
   ]
 }
