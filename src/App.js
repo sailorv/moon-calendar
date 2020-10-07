@@ -11,10 +11,10 @@ class App extends Component {
   onDayClick = (e, day) => {
     alert(day);
   }
-  
+
   render() {
     return (
-      <div className="App">
+      <div className="page-wrapper">
       <Calendar style={style}
         onDayClick={(e, day)=> this.onDayClick(e, day)}/>
       </div>

@@ -1,0 +1,55 @@
+/* Typography */
+$sansSerif = "Open sans", sans-serif;
+
+h2 {
+  font-family: $sansSerif;
+  text-align: center;
+}
+
+.calendar-container {
+  color: #444;
+  margin: 0px auto;
+  margin-top: 3em;
+  transition: border-radius .2s ease-in-out;
+  border-radius: 15px;
+}
+
+ul.calendar-weekdays {
+  margin: 0;
+}
+
+ul.calendar-weekdays li.week-day {
+    display: inline-block;
+    width: calc(100% / 7);
+}
+
+.moonMeta, .lunarStart {
+  display: none;
+}
+.since {
+  display: block;
+}
+
+li.emptySlot, li.day {
+    width: calc(100% / 7);
+    display: inline-block;
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+}
+
+.calendar-container,
+.calendar,
+.calendar-header,
+td,
+tr {
+    padding: 0;
+    margin: 0;
+}
+
+.calendar {
+    background-color: white;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}

@@ -82,7 +82,7 @@ export default class Calendar extends React.Component {
 
   MonthNav = () => {
     return (
-      <span  className="label-month"
+      <span className="label-month-nav"
         onClick={(e) => {this.onChangeMonth(e, this.month())}}>
         {this.month()}
         {this.state.showMonthPopup &&
@@ -99,27 +99,26 @@ export default class Calendar extends React.Component {
   }
 
   showMoonPhase = () => {
-    // let thisDay = moment().format("YYYY-MM-DD");
-    let thisDay = "2020-09-24";
+    let thisDay = moment().format("YYYY-MM-DD");
     let lunarDays = "29.53";
-    let sinceFirstMoonDays = moment(thisDay).diff("2019-12-26", "days");
-    let calcMoonPhase = (sinceFirstMoonDays / lunarDays);
-    let calcMoonPhase2 = calcMoonPhase-Math.floor(calcMoonPhase);
+    let sinceFirstMoonDays = moment().diff("2019-12-26", "days");
+    let calcMoonPhase = sinceFirstMoonDays / lunarDays;
+    let calcMoonPhase2 = calcMoonPhase - Math.floor(calcMoonPhase);
     let calcMoonPhase3 = Math.ceil(calcMoonPhase2 * lunarDays);
 
     if (calcMoonPhase3 <= 1){ // New Moon
        var moonPhaseName = "New Moon";
     } else if (calcMoonPhase3 > 1 && calcMoonPhase3 <= 7){  // Waxing Crescent
        var moonPhaseName = "Waxing Crescent";
-    } else if (calcMoonPhase3 = 8){  // First Quarter
+    } else if (calcMoonPhase3 == 8){  // First Quarter
        var moonPhaseName = "First Quarter";
-    } else if (calcMoonPhase3 <= 20 && calcMoonPhase3 >= 16){
+    } else if (calcMoonPhase3 <= 22 && calcMoonPhase3 >= 15){
        var moonPhaseName = "Waning Gibbous";
     } else {
       var moonPhaseName = "Calculating..."
     }
     return (
-      <span className="current-date">{thisDay}, {calcMoonPhase3} | Today's moon is a {moonPhaseName}</span>
+      <span className={moonPhaseName}>Today's moon is a {moonPhaseName} moon.</span>
     );
   }
 
@@ -187,11 +186,11 @@ export default class Calendar extends React.Component {
     })
 
     return (
+    <div className="calendar-phase-wrapper">
       <div className="calendar-container">
-        <h2>Calendar</h2>
+        <h2>{this.month()} {this.year()}</h2>
         <div className="monthNavigation">
           <this.MonthNav />
-          <this.showYear />
         </div>
         <div className="calendar-weekdays-container">
           <ul className="calendar-weekdays">
@@ -201,11 +200,14 @@ export default class Calendar extends React.Component {
         <div>
           {trElems}
         </div>
+      </div>
+      <div className="phase-container">
         <div className="moonPhase">
         <h2>Today is</h2>
         <this.showMoonPhase />
         </div>
       </div>
+    </div>
     );
 
   }
