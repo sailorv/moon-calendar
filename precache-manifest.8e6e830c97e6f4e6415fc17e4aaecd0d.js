@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24e23b64bd95597e69f4431669a8f148",
+    "revision": "4304ef423ec58559b8be5b8311006099",
     "url": "/moon-calendar/index.html"
   },
   {
-    "revision": "7c04e124b9e32981e928",
-    "url": "/moon-calendar/static/css/main.697b4cbb.chunk.css"
+    "revision": "e8e63bece8ccd948a73d",
+    "url": "/moon-calendar/static/css/main.c01f4862.chunk.css"
   },
   {
     "revision": "155d99856246063fc41f",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/moon-calendar/static/js/2.f12bc997.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c04e124b9e32981e928",
-    "url": "/moon-calendar/static/js/main.c80c5662.chunk.js"
+    "revision": "e8e63bece8ccd948a73d",
+    "url": "/moon-calendar/static/js/main.744c0694.chunk.js"
   },
   {
     "revision": "5b988f4fed3581f39c9c",
